@@ -1,0 +1,3 @@
+babacooll_expose_to_js_homepage:
+    path:     /expose_variable.js
+    defaults: { _controller: BabacoollExposeToJsBundle:RemoteExpose:expose }

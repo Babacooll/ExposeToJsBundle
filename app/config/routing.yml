@@ -1,0 +1,13 @@
+babacooll_expose_to_js:
+    resource: "@BabacoollExposeToJsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+
+homepage:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'default/homepage.html.twig'

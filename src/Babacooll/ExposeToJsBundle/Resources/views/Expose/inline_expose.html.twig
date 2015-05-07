@@ -1,0 +1,8 @@
+<script>
+    {% for key, variable in formattedVariables -%}
+    var {{ key }} = '{{ variable|raw }}';
+    {% endfor -%}
+    {% for key, variable in jsonFormattedVariables -%}
+    var {{ key }} = {{ variable|raw }};
+    {% endfor -%}
+</script>

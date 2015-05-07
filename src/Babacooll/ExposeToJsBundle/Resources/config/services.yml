@@ -1,0 +1,14 @@
+services:
+    babacooll.token_exposer:
+        class: Babacooll\ExposeToJsBundle\Exposer\TokenExposer
+        arguments: [@twig, @router]
+
+    babacooll.inline_exposer:
+        class: Babacooll\ExposeToJsBundle\Exposer\InlineExposer
+        arguments: [@twig]
+
+    babacooll.exposer_reponse_listener:
+        class: Babacooll\ExposeToJsBundle\EventListener\ExposerResponseListener
+        arguments: [@babacooll.exposer]
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
